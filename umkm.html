@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plamethearts - Gourmet Cheesecake Premium dengan rasa yang tak terlupakan.">
+    <title>Plamethearts | Gourmet Cheesecake Portfolio</title>
+    
+    <!-- External Assets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --soft-yellow: #FFFDF2;
+            --brand-yellow: #FACC15;
+            --deep-yellow: #A16207;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--soft-yellow);
+        }
+
+        .brand-font {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.2);
+        }
+
+        .hover-scale {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hover-scale:hover {
+            transform: translateY(-10px);
+        }
+
+        .cake-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .menu-card:hover .cake-img {
+            transform: scale(1.15);
+        }
+
+        .banner-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--soft-yellow);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #EAB308;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-stone-800 antialiased">
+
+    <!-- Navbar Minimalis -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-yellow-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="brand-font text-2xl text-yellow-700">Plamethearts</a>
+            <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-widest text-stone-600">
+                <a href="#menu" class="hover:text-yellow-600 transition">Menu</a>
+                <a href="#testimoni" class="hover:text-yellow-600 transition">Testimoni</a>
+                <a href="https://wa.me/6281223812308" class="text-yellow-700">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="relative h-[85vh] w-full overflow-hidden">
+        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410046/1773116115_c2e29a59.jpeg" alt="[Banner Plamethearts]" class="w-full h-full object-cover">
+        <div class="absolute inset-0 banner-overlay flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl">
+                <span class="inline-block px-4 py-1 rounded-full bg-yellow-400/20 text-yellow-300 text-xs font-bold uppercase tracking-[0.3em] mb-4 backdrop-blur-sm">Premium Quality</span>
+                <h1 class="brand-font text-6xl md:text-8xl text-white mb-6 drop-shadow-2xl">Plamethearts</h1>
+                <p class="text-xl md:text-2xl text-yellow-50 font-light max-w-2xl mx-auto drop-shadow-lg leading-relaxed">
+                    Menghadirkan kelembutan cheesecake autentik dengan sentuhan cinta di setiap potongnya.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#menu" class="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-4 px-10 rounded-full transition duration-300 shadow-2xl transform active:scale-95">
+                        Jelajahi Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <main id="menu" class="max-w-6xl mx-auto py-24 px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-bold text-stone-800 mb-4 tracking-tight">Koleksi Cheesecake Kami</h2>
+            <div class="h-1.5 w-24 bg-yellow-400 mx-auto rounded-full"></div>
+            <p class="mt-4 text-stone-500">Pilih rasa favoritmu dan pesan langsung via WhatsApp</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <!-- Menu 1 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111458_ccc50d9e.jpg" alt="[Imej Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Cheesecake</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Kelembutan keju klasik yang lumer di mulut, cocok untuk segala suasana.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 43.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu 2 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111611_37565ad2.jpg" alt="[Imej Classic New York Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Classic New York</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Tekstur padat dan creamy yang autentik layaknya di toko kue New York.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 45.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Classic%20New%20York%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu 3 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111862_99141625.jpg" alt="[Imej Belgian Chocolate Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Belgian Chocolate</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Perpaduan cokelat mewah asal Belgia yang menyatu sempurna dengan keju.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 48.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Belgian%20Chocolate%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu 4 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111884_45842930.jpg" alt="[Imej Lotus Biscoff Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Lotus Biscoff</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Rasa karamel biskuit Lotus yang legendaris berpadu dengan gurihnya keju.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 50.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Lotus%20Biscoff%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu 5 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111900_cbd3188a.jpg" alt="[Imej Matcha Green Tea Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Matcha Green Tea</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Menggunakan bubuk matcha premium Jepang untuk aroma teh hijau yang menenangkan.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 48.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Matcha%20Green%20Tea%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu 6 -->
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow menu-card hover-scale flex flex-col border border-yellow-50">
+                <div class="h-72 overflow-hidden relative">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111912_70db6dfb.jpg" alt="[Imej Tiramisu Cheesecake]" class="cake-img">
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-800">Tiramisu Case</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-6">Sentuhan kopi dan kelembutan tiramisu dalam balutan cheesecake yang lezat.</p>
+                    <div class="mt-auto flex items-center justify-between border-t border-stone-50 pt-6">
+                        <span class="text-2xl font-black text-yellow-700">Rp 52.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Tiramisu%20Cheesecake" class="bg-stone-900 hover:bg-yellow-500 text-white hover:text-yellow-950 font-bold py-2.5 px-6 rounded-xl transition duration-300 text-sm">Pesan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Menu -->
+            <div class="lg:col-span-3 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 card-shadow mt-12 hover-scale relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition duration-500"></div>
+                <div class="w-full lg:w-2/5 h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl z-10">
+                    <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410008/1773111923_c42af490.jpg" alt="[Imej Specialty Heart's Desire]" class="cake-img">
+                </div>
+                <div class="flex-1 text-center lg:text-left z-10">
+                    <span class="bg-yellow-900 text-yellow-100 text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest mb-6 inline-block">Menu Pilihan Utama</span>
+                    <h3 class="text-5xl font-black text-yellow-950 mb-6 leading-tight">Specialty Heart's Desire</h3>
+                    <p class="text-yellow-900 text-xl mb-10 opacity-90 leading-relaxed font-medium">Mahakarya rasa yang diciptakan khusus bagi Anda yang merayakan cinta dan keinginan terdalam hati.</p>
+                    <div class="flex flex-col sm:flex-row items-center gap-8">
+                        <span class="text-5xl font-black text-yellow-950 tracking-tighter">Rp 55.000</span>
+                        <a href="https://wa.me/6281223812308?text=Halo%20Plamethearts,%20saya%20ingin%20pesan%20Specialty%20Heart's%20Desire%20Cheesecake" class="bg-stone-900 hover:bg-black text-white font-bold py-5 px-14 rounded-2xl transition duration-300 shadow-2xl transform hover:scale-105 active:scale-95 text-lg">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Testimonial -->
+    <section id="testimoni" class="bg-stone-100/50 py-24 px-6 border-y border-yellow-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-stone-800 mb-4 tracking-tight uppercase tracking-widest">Apa Kata Mereka?</h2>
+                <div class="h-1.5 w-24 bg-yellow-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-[2.5rem] card-shadow border border-yellow-50 relative group">
+                    <span class="text-7xl text-yellow-100 absolute top-4 left-6 brand-font group-hover:text-yellow-200 transition duration-300 opacity-50 italic">"</span>
+                    <p class="text-stone-600 mb-8 relative z-10 leading-loose">"Lembut banget kuenya! Beneran premium, rasa kejunya berasa tapi nggak bikin enek. Lotus Biscoff juara!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-yellow-900">S</div>
+                        <div>
+                            <p class="font-bold text-stone-800">Siska Amelia</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-widest">Pecinta Kue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] card-shadow border border-yellow-50 relative group">
+                    <span class="text-7xl text-yellow-100 absolute top-4 left-6 brand-font group-hover:text-yellow-200 transition duration-300 opacity-50 italic">"</span>
+                    <p class="text-stone-600 mb-8 relative z-10 leading-loose">"Packagingnya rapi banget buat kado. Rasanya yang Belgian Chocolate bener-bener mewah cokelatnya."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-stone-800 rounded-full flex items-center justify-center font-bold text-white">A</div>
+                        <div>
+                            <p class="font-bold text-stone-800">Andrian Pratama</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-widest">Pelanggan Tetap</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] card-shadow border border-yellow-50 relative group">
+                    <span class="text-7xl text-yellow-100 absolute top-4 left-6 brand-font group-hover:text-yellow-200 transition duration-300 opacity-50 italic">"</span>
+                    <p class="text-stone-600 mb-8 relative z-10 leading-loose">"Heart's Desire itu menu wajib kalau pesan di sini. Nggak ada tandingannya di sekitar sini!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center font-bold text-yellow-700">M</div>
+                        <div>
+                            <p class="font-bold text-stone-800">Maya Sari</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-widest">Food Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="brand-font text-5xl text-yellow-700 mb-6">Plamethearts</h2>
+            <p class="text-stone-400 mb-12 max-w-lg mx-auto leading-relaxed uppercase tracking-widest text-xs font-semibold">Gourmet Cheesecake Premium • Crafted with Heart</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
+                <a href="https://wa.me/6281223812308" class="flex items-center justify-center gap-4 bg-yellow-50 hover:bg-yellow-100 p-5 rounded-2xl transition duration-300 border border-yellow-100 group">
+                    <span class="text-2xl group-hover:scale-110 transition">📱</span>
+                    <span class="font-bold text-yellow-800 tracking-wider">0812-2381-2308</span>
+                </a>
+                <div class="flex items-center justify-center gap-4 bg-yellow-50 p-5 rounded-2xl border border-yellow-100">
+                    <span class="text-2xl">⏰</span>
+                    <span class="font-bold text-yellow-800 tracking-wider">09:00 - 20:00</span>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-100 pt-12">
+                <p class="text-[10px] text-stone-400 uppercase tracking-[0.5em] font-bold">© 2026 Plamethearts Indramayu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
