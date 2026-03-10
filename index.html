@@ -1,0 +1,181 @@
+import React, { useState, useEffect } from 'react';
+import { GraduationCap, Heart, User, Sparkles, Cake, Instagram, Mail, Phone, ExternalLink } from 'lucide-react';
+
+const App = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const education = [
+    { year: "2014 - 2020", school: "SD NEGERI KEBONKARET", icon: "🏫" },
+    { year: "2020 - 2023", school: "SMP PGRI 1 HAURGEULIS", icon: "📖" },
+    { year: "2023 - 2026", school: "SMK AL-IRSYAD AL-ISLAMIYYAH HAURGEULIS", icon: "🎓" }
+  ];
+
+  const contactInfo = [
+    { label: "WhatsApp / Contact", value: "0812-2381-2308", icon: <Phone size={20} />, link: "tel:081223812308" },
+    { label: "Email", value: "cintasitihabibah@gmail.com", icon: <Mail size={20} />, link: "mailto:cintasitihabibah@gmail.com" },
+    { label: "Instagram", value: "@inmoohearts", icon: <Instagram size={20} />, link: "https://instagram.com/inmoohearts" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#FFFBEB] font-sans text-[#78350F] selection:bg-[#FEF3C7] overflow-x-hidden">
+      {/* Background Decor - Floating Icons */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-20">
+        <div className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: '3s' }}>
+           <Cake size={48} className="text-[#FDE68A]" />
+        </div>
+        <div className="absolute bottom-20 right-10 animate-pulse">
+           <Heart size={40} className="text-[#FDE047]" />
+        </div>
+        <div className="absolute top-1/2 right-20 animate-bounce delay-700" style={{ animationDuration: '4s' }}>
+           <Sparkles size={32} className="text-[#FCD34D]" />
+        </div>
+        <div className="absolute bottom-1/4 left-10 animate-pulse">
+           <div className="text-4xl">🍮</div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <header className="relative pt-20 pb-10 px-6 text-center">
+        <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="relative inline-block">
+            {/* Profile Frame */}
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-[3rem] border-8 border-white shadow-xl overflow-hidden mx-auto bg-white rotate-2 hover:rotate-0 transition-transform duration-500">
+               <img 
+                src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410048/1773109878_810241a7.jpg" 
+                alt="Profil Cinta Siti Habibah"
+                className="w-full h-full object-cover object-top scale-110"
+                onError={(e) => { e.target.src = 'https://via.placeholder.com/300?text=Cinta'; }}
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-[#FDE68A] p-4 rounded-full shadow-lg animate-wiggle border-4 border-white">
+              <span className="text-3xl">🍰</span>
+            </div>
+          </div>
+          
+          <h1 className="mt-8 text-4xl md:text-6xl font-black text-[#92400E] tracking-tight">
+            Cinta Siti Habibah
+          </h1>
+          <p className="mt-3 text-xl text-[#B45309] font-medium italic bg-[#FDE68A]/30 inline-block px-4 py-1 rounded-full">
+            "Semis biskuit, selembut cheesecake."
+          </p>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-6 pb-20 space-y-16 relative z-10">
+        
+        {/* About Me Section */}
+        <section className={`transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="bg-white/90 backdrop-blur-md rounded-[2.5rem] p-8 md:p-10 shadow-sm border-b-8 border-r-8 border-[#FDE68A]">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-[#FEF3C7] p-2 rounded-xl">
+                <User className="text-[#D97706]" size={28} />
+              </div>
+              <h2 className="text-3xl font-black text-[#92400E]">Halo, Aku Cinta!</h2>
+            </div>
+            <p className="leading-relaxed text-[#78350F] text-lg md:text-xl font-medium">
+              Saya adalah pribadi yang ceria dan menyukai hal-hal yang manis seperti cheesecake. 
+              Saat ini saya sedang menempuh pendidikan di SMK Al-Irsyad Al-Islamiyyah Haurgeulis. 
+              Bagi saya, hidup harus dijalani dengan penuh kasih sayang, warna-warna lembut, dan terus menebar kebahagiaan!
+            </p>
+          </div>
+        </section>
+
+        {/* Education Timeline */}
+        <section className={`transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="flex items-center gap-4 mb-10 justify-center">
+            <div className="h-1 w-12 bg-[#FDE68A] rounded-full hidden sm:block"></div>
+            <GraduationCap className="text-[#D97706]" size={36} />
+            <h2 className="text-3xl md:text-4xl font-black text-[#92400E]">Riwayat Sekolah</h2>
+            <div className="h-1 w-12 bg-[#FDE68A] rounded-full hidden sm:block"></div>
+          </div>
+          
+          <div className="space-y-6 relative px-2">
+            <div className="absolute left-[31px] top-0 bottom-0 w-1.5 bg-[#FDE68A] rounded-full opacity-50 hidden md:block"></div>
+
+            {education.map((item, index) => (
+              <div key={index} className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 group relative">
+                <div className="z-10 bg-[#FFF] p-4 rounded-2xl shadow-md border-4 border-[#FDE68A] group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <div className="flex-1 bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-[#FDE68A] w-full transform group-hover:-translate-y-1">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <span className="text-xs font-black text-white bg-[#D97706] px-3 py-1 rounded-full uppercase tracking-widest leading-none">
+                        {item.year}
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-black text-[#92400E] mt-3 leading-tight">
+                        {item.school}
+                      </h3>
+                    </div>
+                    <Sparkles className="text-[#FEF3C7] group-hover:text-[#FDE68A] transition-colors" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className={`transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="bg-[#92400E] text-white rounded-[3rem] p-10 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-10">
+              <Cake size={120} />
+            </div>
+            
+            <h2 className="text-3xl font-black mb-8 flex items-center gap-3">
+              Mari Berteman! <Heart fill="white" size={24} />
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {contactInfo.map((info, idx) => (
+                <a 
+                  key={idx}
+                  href={info.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 bg-white/10 hover:bg-white/20 p-5 rounded-2xl transition-all group"
+                >
+                  <div className="bg-white text-[#92400E] p-3 rounded-xl group-hover:scale-110 transition-transform">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#FDE68A] uppercase tracking-widest">{info.label}</p>
+                    <p className="text-lg font-bold flex items-center gap-2">
+                      {info.value} <ExternalLink size={14} className="opacity-50" />
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Simple Footer */}
+        <footer className="text-center pt-10 border-t-2 border-[#FDE68A]/30">
+          <p className="text-[#B45309] font-bold">
+            Dibuat dengan rasa sayang & cheesecake ✨
+          </p>
+          <p className="text-[#D97706] text-sm mt-1">
+            Cinta Siti Habibah &copy; 2024
+          </p>
+        </footer>
+      </main>
+
+      <style jsx>{`
+        @keyframes wiggle {
+          0%, 100% { transform: rotate(-8deg); }
+          50% { transform: rotate(8deg); }
+        }
+        .animate-wiggle {
+          animation: wiggle 2.5s ease-in-out infinite;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default App;
